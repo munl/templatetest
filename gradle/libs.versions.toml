@@ -1,6 +1,7 @@
 [versions]
 # libraries
 annotations = "24.0.1"
+androidxCoreVersion = "1.10.1"
 
 # plugins
 kotlin = "1.9.0"
@@ -11,6 +12,7 @@ kover = "0.7.3"
 
 [libraries]
 annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
+androidxCore = { group = "androidx.core", name = "core-ktx",  version.ref = "androidxCoreVersion"}
 
 [plugins]
 changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }

@@ -4,15 +4,14 @@
     <name>templatetest Template</name>
     <vendor>munl</vendor>
 
-    <depends>com.intellij.modules.platform</depends>
+    <!-- Product and plugin compatibility requirements -->
+    <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
+    <depends>org.jetbrains.android</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="com.github.munl.templatetest.WizardTemplateProviderImpl" />
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.munl.templatetest.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.munl.templatetest.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>
